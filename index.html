@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TONY BOY | Going Hard 2 - Official T-Shirt</title>
+  
+  <!-- Font Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Collegamento CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Librerie 3D Three.js e GLTFLoader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+
+  <!-- Luci di sfondo Going Hard 2 -->
+  <div class="bg-lighting">
+    <div class="spotlight-red"></div>
+    <div class="ambient-cyan"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="gh2-title">Going Hard 2</span>
+      <span class="artist-sub">TONY BOY</span>
+    </div>
+    <div class="badge-exclusive">LIMITED DROP</div>
+  </header>
+
+  <main class="main-container">
+    
+    <!-- Viewer 3D -->
+    <section class="visualizer-section">
+      <div id="canvas-container">
+        <canvas id="tshirt-canvas"></canvas>
+      </div>
+      <div class="canvas-hint">
+        <span>Scorri o trascina con il mouse per ruotare in 3D</span>
+      </div>
+    </section>
+
+    <!-- Info e Checkout -->
+    <section class="product-info-section">
+      <div class="product-header">
+        <span class="album-tag">GH2 OFFICIAL MERCHANDISE</span>
+        <h1 class="product-title">GH2 VINTAGE TEE</h1>
+        <div class="price-row">
+          <span class="current-price">€ 45,00</span>
+          <span class="shipping-tag">Spedizione rapida 24/48h</span>
+        </div>
+      </div>
+
+      <p class="description">
+        T-shirt oversize celebrativa del disco cult <em>"Going Hard 2"</em> di Tony Boy. 
+        Cotone organico pesante 260 GSM con stampa serigrafica ad altissima definizione.
+      </p>
+
+      <!-- Scelta taglia -->
+      <div class="size-selector-area">
+        <div class="size-header">
+          <label>SELEZIONA LA TAGLIA</label>
+          <span id="stock-feedback" class="stock-status">Seleziona una taglia</span>
+        </div>
+        <div class="size-buttons" id="size-options"></div>
+      </div>
+
+      <!-- Pulsante acquisto -->
+      <div class="action-area">
+        <button id="buy-button" class="btn-purchase" disabled>
+          <span class="btn-text">SELEZIONA UNA TAGLIA</span>
+          <span class="btn-icon">→</span>
+        </button>
+        <p class="guarantee-text">🔒 Pagamento protetto & reindirizzamento sicuro a Shopify</p>
+      </div>
+
+      <!-- Disponibilità Drop -->
+      <div class="stock-overview-box">
+        <h3>DISPONIBILITÀ DROP</h3>
+        <ul id="stock-list-display"></ul>
+      </div>
+
+      <!-- Specifiche -->
+      <div class="specs-grid">
+        <div class="spec-card">
+          <h4>FIT</h4>
+          <p>Boxy & Oversize</p>
+        </div>
+        <div class="spec-card">
+          <h4>MATERIALE</h4>
+          <p>100% Cotone</p>
+        </div>
+        <div class="spec-card">
+          <h4>GRAMMATURA</h4>
+          <p>260 GSM Heavyweight</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Barra fissa per smartphone -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-info">
+      <span class="mobile-title">GH2 TEE</span>
+      <span class="mobile-price">€ 45,00</span>
+    </div>
+    <button id="mobile-buy-btn" class="btn-purchase mobile-btn" disabled>
+      ACQUISTA
+    </button>
+  </div>
+
+  <footer class="footer">
+    <p>© GH2 MERCH — TONY BOY OFFICIAL STORE. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
